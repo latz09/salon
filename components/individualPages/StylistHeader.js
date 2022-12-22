@@ -17,7 +17,7 @@ export default StylistHeader;
 
 function Navigation() {
 	return (
-		<div className='grid grid-cols-3 gap-4 lg:gap-0 lg:grid-cols-6 place-items-center text-black tracking-widest'>
+		<div className='grid grid-cols-3 gap-4 lg:gap-0 lg:grid-cols-6 place-items-center text-black opacity-100 tracking-widest'>
 			{stylistLinks.map((link) => (
 				<div
 					key={link.name}
