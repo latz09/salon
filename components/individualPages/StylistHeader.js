@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { BiArrowBack } from 'react-icons/bi';
 import { stylistLinks } from '../../data/stylists';
 
+import { motion } from 'framer-motion';
 
 const StylistHeader = ({ name }) => {
 	return (
@@ -41,7 +42,13 @@ function IndividualPageHeader({ name }) {
 				<div className='text-2xl lg:text-4xl font-bold flex space-x-2'>
 					{' '}
 					<span className='opacity-60 font-thin italic'> Stylist -</span>{' '}
-					<div>{name}</div>
+					<motion.div
+						initial={{ opacity: 0, scale: 0.4 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 0.3 }}
+					>
+						{name}
+					</motion.div>
 				</div>
 				<Link href={'/'}>
 					<div className='text-2xl cursor-pointer  flex items-center  space-x-4 mr-8 hover:text-white hover:scale-105 transition duration-700'>

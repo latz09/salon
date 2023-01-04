@@ -65,11 +65,16 @@ function Details({
 	return (
 		<div className='h-full grid gap-8 lg:gap-12'>
 			<div className=' grid gap-4 place-items-center'>
-				<div className='grid place-items-center lg:flex lg:space-x-1 text-2xl'>
-					<div className='flex space-x-1'>
+				<div className='flex space-x-1 text-2xl'>
+					<motion.div
+						className='flex space-x-1'
+						initial={{ opacity: 0, scale: 0.4 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 0.3 }}
+					>
 						<span>{firstName}</span>
 						<span>{lastName} - </span>
-					</div>
+					</motion.div>
 					<span className='lg:mx-4'>{specialty}</span>
 				</div>
 				<div className='flex space-x-4 text-2xl text-dark  '>
