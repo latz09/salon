@@ -8,7 +8,7 @@ const NextPageTease = ({ title }) => {
 				className='grid place-items-center gap-4'
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
-				transition={{ delay: 2, duration: 1.6 }}
+				transition={{ delay: 2, duration: 1.8 }}
 			>
 				<span>{title}</span>
 				<motion.div
