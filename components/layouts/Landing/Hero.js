@@ -8,8 +8,8 @@ const Hero = () => {
 			<div className='flex-grow grid place-items-center'>
 				<div className='grid gap-6 lg:gap-12  '>
 					<motion.div
-						initial={{ scale: 1.4, opacity: 0.4 }}
-						animate={{ scale: 1, opacity: 1 }}
+						initial={{ opacity: 0.4 }}
+						animate={{ opacity: 1 }}
 						transition={{ duration: 1.8 }}
 						className='text-6xl sm:text-7xl lg:text-8xl'
 					>
@@ -18,8 +18,8 @@ const Hero = () => {
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
-						transition={{ delay: 1.8, duration: 0.7 }}
-						className="place-self-center lg:text-xl"
+						transition={{ delay: 1.2, duration: 1.2 }}
+						className='place-self-center lg:text-xl'
 					>
 						<BookNow />
 					</motion.div>
