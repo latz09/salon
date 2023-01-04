@@ -11,7 +11,7 @@ const Hero = () => {
 						initial={{ opacity: 0.2 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 1.8 }}
-						className='text-6xl sm:text-7xl lg:text-8xl'
+						className='text-6xl sm:text-7xl lg:text-8xl text-center grid gap-2 lg:flex space-x-2   place-items-center tracking-wider  text-black/80 '
 					>
 						<Logo />
 					</motion.div>
@@ -34,13 +34,13 @@ export default Hero;
 
 export const Logo = () => {
 	return (
-		<div className='text-center grid gap-2 lg:flex space-x-2   place-items-center tracking-wider  text-black/80  '>
+		<>
 			<span className='border-b-2 lg:border-b-0 border-white pb-2 lg:pb-0'>
 				nivala
 			</span>
 			<span className='text-white hidden lg:block'>|</span>
 			<span>salon suites</span>
-		</div>
+		</>
 	);
 };
 

@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { BiArrowBack } from 'react-icons/bi';
-
 import { stylistLinks } from '../../data/stylists';
-import { Logo } from '../layouts/Landing/Hero';
+
 
 const StylistHeader = ({ name }) => {
 	return (
@@ -35,8 +34,8 @@ function Navigation() {
 function IndividualPageHeader({ name }) {
 	return (
 		<div className='grid  gap-6 pt-2'>
-			<div className='place-self-center text-4xl lg:text-7xl py-4'>
-				<Logo />
+			<div className='grid place-items-cente ml-8 opacity-80 hover:opacity-100 hover:scale-105 transition duration-700 cursor-pointer'>
+				<StylistPageLogo />
 			</div>
 			<div className='border-b pb-3 border-black border-opacity-30 flex justify-between'>
 				<div className='text-2xl lg:text-4xl font-bold flex space-x-2'>
@@ -54,5 +53,17 @@ function IndividualPageHeader({ name }) {
 				</Link>
 			</div>
 		</div>
+	);
+}
+
+function StylistPageLogo() {
+	return (
+		<Link href={'/'}>
+			<div className='text-2xl text-center flex space-x-2   place-items-center tracking-wider  text-black/80 '>
+				<span className=''>nivala</span>
+				<span className='text-white'>|</span>
+				<span>salon suites</span>
+			</div>
+		</Link>
 	);
 }

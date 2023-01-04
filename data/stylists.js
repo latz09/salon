@@ -78,4 +78,4 @@ export const stylistLinks = [
 ];
 
 export const dumbyAbout =
-	'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. Sed velit dignissim sodales ut eu sem integer. Consequat semper viverra nam libero justo laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. Sed velit dignissim sodales ut eu sem integer. Consequat semper viverra nam libero justo laoreet.';
+	'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. Sed velit dignissim sodales ut eu sem integer. Consequat semper viverra nam libero justo laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';

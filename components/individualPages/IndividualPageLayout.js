@@ -1,12 +1,15 @@
 import Image from 'next/image';
 import { dumbyAbout } from '../../data/stylists';
 import StylistHeader from './StylistHeader';
+import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
+import { motion } from 'framer-motion';
 import { FaFacebook } from 'react-icons/fa';
 import { GiSmartphone } from 'react-icons/gi';
 import { BiBuilding } from 'react-icons/bi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsTwitter, BsInstagram } from 'react-icons/bs';
 import { BookNow } from '../layouts/Landing/Hero';
+import { useState } from 'react';
 
 const IndividualPageLayout = ({
 	firstName,
@@ -109,10 +112,34 @@ function Details({
 }
 
 function About({ name }) {
+	const [openAbout, setOpenAbout] = useState(false);
+
 	return (
 		<div className='grid gap-4 max-w-4xl mx-auto text-lg font-roboto text-black place-items-center '>
-			<div className='text-3xl tracking-wider text-center lg:text-start'>About {name}...</div>
-			<div className='tracking-wider leading-8 text-justify '>{dumbyAbout}</div>
+			<div className='flex space-x-4 items-center'>
+				<div className='text-3xl tracking-wider text-center lg:text-start'>
+					About {name}...
+				</div>
+				<button
+					onClick={() => {
+						setOpenAbout(!openAbout);
+					}}
+				>
+					<span className='text-dark text-3xl hover:opacity-70 transition duration-700'>
+						{!openAbout ? <AiFillCaretDown /> : <AiFillCaretUp />}
+					</span>
+				</button>
+			</div>
+			{openAbout && (
+				<motion.div
+					className='tracking-wider leading-8 text-justify '
+					initial={{ opacity: 0, scale: 0.7 }}
+					whileInView={{ opacity: 1, scale: 1 }}
+					transition={{duration: 1}}
+				>
+					{dumbyAbout}
+				</motion.div>
+			)}
 		</div>
 	);
 }
