@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { dumbyAbout } from '../../data/stylists';
 import StylistHeader from './StylistHeader';
 import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { FaFacebook } from 'react-icons/fa';
 import { GiSmartphone } from 'react-icons/gi';
 import { BiBuilding } from 'react-icons/bi';
@@ -130,16 +130,19 @@ function About({ name }) {
 					</span>
 				</button>
 			</div>
-			{openAbout && (
-				<motion.div
-					className='tracking-wider leading-8 text-justify '
-					initial={{ opacity: 0, scale: 0.7 }}
-					whileInView={{ opacity: 1, scale: 1 }}
-					transition={{duration: 1}}
-				>
-					{dumbyAbout}
-				</motion.div>
-			)}
+			<AnimatePresence>
+				{openAbout && (
+					<motion.div
+						className='tracking-wider leading-8 text-justify '
+						initial={{ opacity: 0, scale: 0.7 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 1 }}
+						exit={{ opacity: 0, scale: 0 }}
+					>
+						{dumbyAbout}
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</div>
 	);
 }
