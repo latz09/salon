@@ -21,7 +21,7 @@ function Navigation() {
 			{stylistLinks.map((link) => (
 				<div
 					key={link.name}
-					className='cursor-pointer text-l lg:text-2xl font-questrial '
+					className='cursor-pointer text-lg lg:text-2xl font-questrial '
 				>
 					<Link href={`/stylists/${link.name}`}>
 						<span>{link.name}</span>
