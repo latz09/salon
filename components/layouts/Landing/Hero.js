@@ -33,7 +33,7 @@ export default Hero;
 
 export const Logo = () => {
 	return (
-		<div className='text-center grid gap-2 lg:flex space-x-2 mx-1  items-center tracking-wider scale-y-110 text-black/80  '>
+		<div className='text-center grid gap-2 lg:flex space-x-2   items-center tracking-wider  text-black/80  '>
 			<span className='border-b-2 lg:border-b-0 border-white pb-2 lg:pb-0'>
 				nivala
 			</span>
