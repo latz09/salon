@@ -1,17 +1,27 @@
 import Link from 'next/link';
 import NextPageTease from '../../utils/NextPageTease';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
 	return (
 		<div className='flex flex-col h-screen place-items-center  '>
 			<div className='flex-grow grid place-items-center'>
-				<div className='grid  place-items-center gap-6 lg:gap-12 '>
-					<div className='text-4xl lg:text-9xl '>
+				<div className='grid  place-items-center gap-6 lg:gap-12  '>
+					<motion.div
+						initial={{ scale: 1.4, opacity: 0.4 }}
+						animate={{ scale: 1, opacity: 1 }}
+						transition={{ duration: 1.8 }}
+						className="text-6xl sm:text-7xl lg:text-8xl"
+					>
 						<Logo />
-					</div>
-					<div className='text-lg lg:text-2xl'>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ delay: 1.8, duration: 0.7 }}
+					>
 						<BookNow />
-					</div>
+					</motion.div>
 				</div>
 			</div>
 			<NextPageTease title='Find Your Stylist' />
@@ -23,20 +33,24 @@ export default Hero;
 
 export const Logo = () => {
 	return (
-		<div className='flex space-x-2  items-center tracking-wider scale-y-110 text-black/80 '>
-			<span className=''>nivala</span>
-			<span className='text-white lg:text-8xl'>|</span>
-			<span className='text-whit'>salon suites</span>
+		<div className='text-center grid gap-2 lg:flex space-x-2 mx-1  items-center tracking-wider scale-y-110 text-black/80  '>
+			<span className='border-b-2 lg:border-b-0 border-white pb-2 lg:pb-0'>
+				nivala
+			</span>
+			<span className='text-white hidden lg:block'>|</span>
+			<span>salon suites</span>
 		</div>
 	);
 };
 
 export function BookNow() {
 	return (
-		<Link href={'/'}>
-			<div className='p-2 px-4 lg:p-4 bg-white rounded-lg  text-black/70  font-bold tracking-[.16rem] font-questrial shadow-lg hover:shadow-xl hover:text-black/100 cursor-pointer hover:scale-105 transition duration-700'>
-				<span className=' '>Schedule Online Today</span>
-			</div>
-		</Link>
+		<div>
+			<Link href={'/'}>
+				<div className='p-2 px-4 lg:p-4 bg-white rounded-lg  text-black/70  font-bold tracking-[.16rem] font-questrial shadow-lg hover:shadow-xl hover:text-black/100 cursor-pointer hover:scale-105 transition duration-700'>
+					<span className=' '>Schedule Online Today</span>
+				</div>
+			</Link>
+		</div>
 	);
 }
