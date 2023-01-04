@@ -16,9 +16,9 @@ const Hero = () => {
 						<Logo />
 					</motion.div>
 					<motion.div
-						// initial={{ opacity: 0 }}
-						// animate={{ opacity: 1 }}
-						// transition={{ delay: 1.8, duration: 0.7 }}
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ delay: 1.8, duration: 0.7 }}
 					>
 						<BookNow />
 					</motion.div>
